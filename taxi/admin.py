@@ -31,7 +31,7 @@ class CarAdmin(admin.ModelAdmin):
     search_fields = ["model"]
     list_filter = ["manufacturer"]
 
-    @admin.display(description="country")  # wanted to display country, obj -> Car instance
+    @admin.display(description="country")
     def get_country(self, obj):
         return obj.manufacturer.country
 
